@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9ef2a14-30c6-4315-a5f1-611b35484be9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1kMEQiP706yOc0dAClssySPAk41" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Kruna" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/EndTech Website/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9ef2a14-30c6-4315-a5f1-611b35484be9" name="Default Changelist" comment="" />
+      <created>1605502045638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605502045638</updated>
+      <workItem from="1605502046692" duration="19084000" />
+      <workItem from="1605585751152" duration="6605000" />
+      <workItem from="1605732270683" duration="4147000" />
+      <workItem from="1605900406440" duration="9612000" />
+      <workItem from="1606689110889" duration="9320000" />
+      <workItem from="1606763408635" duration="6824000" />
+      <workItem from="1606980278884" duration="1349000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="609" y="335" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605598157809">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="609" y="335" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.960@0.0.1707.960" timestamp="1605598157809" />
+    <state x="634" y="236" key="FileChooserDialogImpl" timestamp="1605502727793">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="634" y="236" key="FileChooserDialogImpl/0.0.1707.960@0.0.1707.960" timestamp="1605502727793" />
+    <state width="1685" height="249" key="GridCell.Tab.0.bottom" timestamp="1605522072112">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1685" height="249" key="GridCell.Tab.0.bottom/0.0.1707.960@0.0.1707.960" timestamp="1605522072112" />
+    <state width="1685" height="249" key="GridCell.Tab.0.center" timestamp="1605522072112">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1685" height="249" key="GridCell.Tab.0.center/0.0.1707.960@0.0.1707.960" timestamp="1605522072112" />
+    <state width="1685" height="249" key="GridCell.Tab.0.left" timestamp="1605522072112">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1685" height="249" key="GridCell.Tab.0.left/0.0.1707.960@0.0.1707.960" timestamp="1605522072112" />
+    <state width="1685" height="249" key="GridCell.Tab.0.right" timestamp="1605522072112">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1685" height="249" key="GridCell.Tab.0.right/0.0.1707.960@0.0.1707.960" timestamp="1605522072112" />
+    <state x="434" y="216" key="IDE.errors.dialog" timestamp="1605508172533">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="434" y="216" key="IDE.errors.dialog/0.0.1707.960@0.0.1707.960" timestamp="1605508172533" />
+    <state x="355" y="126" key="SettingsEditor" timestamp="1606980439162">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="355" y="126" key="SettingsEditor/0.0.1707.960@0.0.1707.960" timestamp="1606980439162" />
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1605503507293">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/0.0.1707.960@0.0.1707.960" timestamp="1605503507293" />
+  </component>
+</project>
