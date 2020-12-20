@@ -3,7 +3,9 @@
 		"outDir": "dist",
 		"strict": true,
 		"incremental": true,
-		"target": "ES5"
+		"target": "ES5",
+		"moduleResolution": "Node",
+		"module": "CommonJS"
 	},
 	"include": [
 		"src/**.ts"
