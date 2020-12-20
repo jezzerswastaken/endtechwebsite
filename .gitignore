@@ -1,1 +1,12 @@
-.idea
+# Build
+node_modules/
+dist/
+**.tsbuildinfo
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.iml

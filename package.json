@@ -1,0 +1,23 @@
+{
+  "name": "endtechwebsite",
+  "version": "1.0.0",
+  "description": "Endtech Website",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jezzerswastaken/endtechwebsite.git"
+  },
+  "author": "jezzerswastaken",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jezzerswastaken/endtechwebsite/issues"
+  },
+  "homepage": "https://github.com/jezzerswastaken/endtechwebsite#readme",
+  "dependencies": {
+    "typescript": "^4.1.3"
+  }
+}
