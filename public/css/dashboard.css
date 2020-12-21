@@ -1,0 +1,15 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: url("/assets/images/ncs.jpg") center no-repeat;
+	background-size: cover;
+}

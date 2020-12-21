@@ -1,0 +1,24 @@
+<header>
+    <div class="logo-container">
+        <img class="logo" src="/assets/images/endtechlogo.png" alt="hm">
+    </div>
+    <nav>
+        <ul class="nav_links">
+            <% for (let i = 0; i < links.length; i++) {
+                let name = Object.keys(links[i]);
+                let to = links[i][name]; %>
+                <li><a href=<%= to %>><%= name %></a></li>
+            <% } %>
+        </ul>
+    </nav>
+
+    <% if (auth) { %>
+        <div class="avatar">
+            <a href="/auth/disconnect"><i class="material-icons">exit_to_app</i></a>
+            <img src="https://cdn.discordapp.com/avatars/<%= auth.id %>/<%= auth.avatar %>.png"
+                 alt="<%= auth.username %>" height="50" width="50">
+        </div>
+    <% } else { %>
+        <a class="login" href="/auth"><button>Member Login</button></a>
+    <% } %>
+</header>

@@ -5,6 +5,8 @@ import * as bodyParser from "body-parser";
 import * as cookieParser from "cookie-parser"
 import { isAuthenticated } from "../auth";
 import { publicRouter } from "./public";
+import { membersRouter } from "./members";
+import { projectsRouter } from "./projects";
 
 export const router = Express.Router();
 
@@ -14,7 +16,9 @@ router.use(cookieParser());
 router.use("/", Express.static("public/"));
 router.use("/", publicRouter);
 router.use("/auth", authRouter);
+router.use("/members", privatise(membersRouter));
 router.use("/apps", privatise(appsRouter));
+router.use("/projects", privatise(projectsRouter));
 
 function privatise(router: Express.Router): Express.Router {
 	const privateRouter = Express.Router();
