@@ -1,4 +1,4 @@
-import { getUserInfo, getUserToken } from "./discord";
+import { getUserInfo, getUserToken, isMember } from "./discord";
 import { db } from "../index";
 
 type Req = any;
@@ -11,12 +11,18 @@ export function getAuth(req: Req, res: Res) {
 export async function onOauthCallback(req: Req, res: Res) {
 	let access = await getUserToken(req.query.code);
 	let info = await getUserInfo(access.access_token);
-	db.query("REPLACE INTO archived_logged_on VALUES (?, ?, ?);",
-		[ access.access_token,
-			Date.now() + access.expires_in * 1000,
-			JSON.stringify(info)
-		]);
-	req.cookies.token = access.access_token;
+	if (await isMember(info.id)) {
+		db.query("REPLACE INTO archived_logged_on VALUES (?, ?, ?);",
+			[ access.access_token,
+				Date.now() + access.expires_in * 1000,
+				JSON.stringify(info)
+			]);
+		res.cookie("token", access.access_token);
+		console.log("endtech!");
+	} else {
+		res.clearCookie("token");
+	}
+
 	res.redirect("/");
 }
 
@@ -28,7 +34,6 @@ export async function isAuthenticated(token: string) {
 				if (results.length == 0) {
 					resolve(false);
 				} else if (results[0].expires_in <= Date.now()) {
-					console.log("nooo!!!");
 					resolve(false);
 				} else {
 					resolve(true);
