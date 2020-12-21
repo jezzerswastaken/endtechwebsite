@@ -19,11 +19,19 @@ export async function onOauthCallback(req: Req, res: Res) {
 				JSON.stringify(info)
 			]);
 		res.cookie("token", access.access_token);
-		console.log("endtech!");
 	} else {
 		res.clearCookie("token");
 	}
 
+	res.redirect("/");
+}
+
+export function onDisconnect(req: Req, res: Res) {
+	let token: string = req.cookies.token;
+	if (!token) return;
+
+	db.query("DELETE FROM archived_logged_on WHERE token = ?;", [ token ]);
+	res.clearCookie("token");
 	res.redirect("/");
 }
 

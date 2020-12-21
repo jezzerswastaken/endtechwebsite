@@ -6,6 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>EndTech</title>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
@@ -16,20 +17,20 @@
             </div>
             <nav>
                 <ul class="nav_links">
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Apply</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#apply">Apply</a></li>
                 </ul>
             </nav>
 
             <% if (auth) { %>
-                <a class="avatar" href="/">
-                    <p><%= auth.username %></p>
+                <div class="avatar">
+                    <a href="/auth/disconnect"><i class="material-icons">exit_to_app</i></a>
                     <img src="https://cdn.discordapp.com/avatars/<%= auth.id %>/<%= auth.avatar %>.png"
-                         alt="<%= auth.username %>" height="40" width="40">
-                </a>
+                         alt="<%= auth.username %>" height="50" width="50">
+                </div>
             <% } else { %>
-                <a class="login" href="/auth"><button>Member Log In</button></a>
+                <a class="login" href="/auth"><button>Member Login</button></a>
             <% } %>
         </header>
     </div>

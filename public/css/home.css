@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -26,7 +26,7 @@ body {
 
 li, a, button {
 	font-family: 'Manrope', sans-serif;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 16px;
 	color: #b4b7ba;
 	text-decoration: none;
@@ -41,9 +41,20 @@ li, a, button {
 	font-weight: 500;
 }
 
+.avatar i {
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #b4b7ba;
+	transition: color ease .3s;
+	text-decoration: none;
+}
+
+.avatar i:hover {
+	color: #a42b2b;
+}
+
 .avatar img {
 	clip-path: circle();
-	margin-left: 10px;
 }
 
 header {
@@ -90,6 +101,7 @@ nav {
 }
 
 button {
+	white-space: nowrap;
 	padding: 9px 25px;
 	background-color: rgba(106, 8, 153, 1);
 	border: none;
