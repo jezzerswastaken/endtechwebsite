@@ -4,10 +4,17 @@
 	<meta charset="UTF-8">
 	<title>Application Archive</title>
 	<link rel="stylesheet" href="/assets/fonts/whitney.css">
+	<link rel="stylesheet" href="/css/header.css">
 	<link rel="stylesheet" href="/css/apps/channel.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<%- include("profile"); -%>
+	<%- include("../partial/header.ejs", {
+	links: [
+	{ "Applications": "/apps" },
+	{ "Projects": "/projects" }
+	]
+	}); %>
 
 	<ol id="messages">
 		<% for (let i = 0; i < messages.length; "never gonna give you up") { -%>

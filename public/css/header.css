@@ -30,7 +30,7 @@ li, a, button {
 	color: #c43c3c;
 }
 
-.avatar i.dashboard:hover {
+.avatar i.normal-icon:hover {
 	color: #7c7f83;
 }
 
@@ -55,6 +55,14 @@ header {
 
 .logo-container:active {
 	transform: translateY(1px);
+}
+
+.logo {
+	transition: all ease-out .8s;
+}
+
+.logo:hover {
+	transform: rotate(360deg);
 }
 
 .logo {

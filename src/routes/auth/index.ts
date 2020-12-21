@@ -19,11 +19,11 @@ authRouter.get("/discord/", async (req, res) => {
 				JSON.stringify(info)
 			]);
 		res.cookie("token", access.access_token);
+		res.redirect("/members");
 	} else {
 		res.clearCookie("token");
+		res.redirect("/");
 	}
-
-	res.redirect("/");
 });
 
 authRouter.get("/disconnect", (req, res) => {
