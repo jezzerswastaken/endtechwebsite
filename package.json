@@ -4,8 +4,8 @@
   "description": "Endtech Website",
   "main": "dist/index.js",
   "scripts": {
-    "preinstall": "if [ ! -f .env ]; then cp .template.env .env",
-    "start": "tsc && node .",
+    "preinstall": "if [ ! -f .env ]; then cp .template.env .env; fi",
+    "start": "npx tsc && node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
