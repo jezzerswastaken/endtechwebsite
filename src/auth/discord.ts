@@ -32,7 +32,7 @@ export async function getUserToken(code: string):
 export async function getUserInfo(token: string):
 	Promise<APIUser> {
 
-	let response = await fetch("http://discord.com/api/users/@me", {
+	let response = await fetch("https://discord.com/api/users/@me", {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/x-www-form-urlencoded",
