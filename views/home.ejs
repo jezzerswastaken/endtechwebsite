@@ -11,7 +11,9 @@
 <body>
     <div class="wrap">
         <header>
-            <img class="logo" src="/assets/images/endtechlogo.png" alt="hm">
+            <div class="logo-container">
+                <img class="logo" src="/assets/images/endtechlogo.png" alt="hm">
+            </div>
             <nav>
                 <ul class="nav_links">
                     <li><a href="#">Gallery</a></li>
@@ -20,12 +22,11 @@
                 </ul>
             </nav>
 
-            <% if (auth) {
-                console.log(auth); %>
+            <% if (auth) { %>
                 <a class="avatar" href="/">
                     <p><%= auth.username %></p>
                     <img src="https://cdn.discordapp.com/avatars/<%= auth.id %>/<%= auth.avatar %>.png"
-                                 alt="<%= auth.username %>" height="40" width="40">
+                         alt="<%= auth.username %>" height="40" width="40">
                 </a>
             <% } else { %>
                 <a class="login" href="/auth"><button>Member Log In</button></a>
