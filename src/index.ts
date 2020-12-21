@@ -1,13 +1,18 @@
 import { config } from "dotenv";
 import * as Express from "express";
 import { router } from "./routes";
-import * as bodyParser from "body-parser";
+import { Client } from "discord.js";
 
 config();
 
 export const app = Express();
 
-app.use(bodyParser.json());
+export const client = new Client();
+client.once("ready", () => {
+	console.log(`Connected to ${client.user?.username || "discord"}!`);
+});
+client.login(process.env.DISCORD_TOKEN);
+
 app.use(router);
 app.listen(process.env.PORT || 8080, () => {
 	console.log(`Server listening to port ${process.env.PORT || 8080}`);
