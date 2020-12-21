@@ -1,5 +1,5 @@
 import * as Express from "express";
-import { getConnectedUserInfo } from "../auth";
+import { getConnectedUserInfo } from "./auth";
 import { APIUser } from "discord-api-types";
 
 export const publicRouter = Express.Router();

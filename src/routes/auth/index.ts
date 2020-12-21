@@ -1,16 +1,16 @@
 import { getUserInfo, getUserToken, isMember } from "./discord";
-import { db } from "../index";
+import { db } from "../../index";
 import { APIUser } from "discord-api-types";
+import * as Express from "express";
 
-type Req = any;
-type Res = any;
+export const authRouter = Express.Router();
 
-export function getAuth(req: Req, res: Res) {
-	res.redirect(process.env.OAUTH2_URL);
-}
+authRouter.get("/", (req, res) => {
+	res.redirect(process.env.OAUTH2_URL as string);
+});
 
-export async function onOauthCallback(req: Req, res: Res) {
-	let access = await getUserToken(req.query.code);
+authRouter.get("/discord/", async (req, res) => {
+	let access = await getUserToken(req.query.code as string);
 	let info = await getUserInfo(access.access_token);
 	if (await isMember(info.id)) {
 		db.query("REPLACE INTO archived_logged_on VALUES (?, ?, ?);",
@@ -24,16 +24,16 @@ export async function onOauthCallback(req: Req, res: Res) {
 	}
 
 	res.redirect("/");
-}
+});
 
-export function onDisconnect(req: Req, res: Res) {
+authRouter.get("/disconnect", (req, res) => {
 	let token: string = req.cookies.token;
 	if (!token) return;
 
 	db.query("DELETE FROM archived_logged_on WHERE token = ?;", [ token ]);
 	res.clearCookie("token");
 	res.redirect("/");
-}
+});
 
 export async function isAuthenticated(token: string) {
 	return new Promise(resolve => {
@@ -43,7 +43,6 @@ export async function isAuthenticated(token: string) {
 				if (results.length == 0) {
 					resolve(false);
 				} else if (results[0].expires_in <= Date.now()) {
-					console.log("nooo!!!");
 					resolve(false);
 				} else {
 					resolve(true);

@@ -1,12 +1,12 @@
 import * as Express from "express";
-import { appsRouter } from "./applications";
+import { appsRouter } from "./apps";
 import { authRouter } from "./auth";
-import * as bodyParser from "body-parser";
-import * as cookieParser from "cookie-parser"
-import { isAuthenticated } from "../auth";
 import { publicRouter } from "./public";
 import { membersRouter } from "./members";
 import { projectsRouter } from "./projects";
+import * as bodyParser from "body-parser";
+import * as cookieParser from "cookie-parser"
+import { isAuthenticated } from "./auth";
 
 export const router = Express.Router();
 

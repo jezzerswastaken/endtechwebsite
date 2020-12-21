@@ -1,6 +1,6 @@
 import * as Express from "express";
 import { APIUser } from "discord-api-types";
-import { getConnectedUserInfo } from "../auth";
+import { getConnectedUserInfo } from "./auth";
 
 export const membersRouter = Express.Router();
 

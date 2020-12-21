@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/apps/profile.css">
+<link href="/css/apps/profile-mobile.css" media="@media only screen and (max-width: 1200px)" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<nav>
+    <header>
+        <a href="/apps">
+            <img id="logo" src="/assets/images/endtechlogo.png" alt="EndTech Logo" width="60px" height="60px">
+        </a>
+        <h3>Endtech Application Archive</h3>
+    </header>
+
+    <div id="profile">
+        <button id="sign-out"><a href="/auth/disconnect">Sign Out</a></button>
+        <img id="logged-user-profile-pic"
+             src="https://cdn.discordapp.com/avatars/<%= auth.id %>/<%= auth.avatar %>.png"
+             alt="Profile Picture" width="45px" height="45px">
+    </div>
+</nav>

@@ -3,7 +3,8 @@ import fetch from "cross-fetch";
 import { APIUser, RESTPostOAuth2AccessTokenResult, RESTPostOAuth2AccessTokenURIEncodedData } from "discord-api-types";
 import { ParsedUrlQueryInput } from "querystring";
 import { Snowflake } from "discord.js";
-import { client } from "../index";
+import { client } from "../../index";
+import { toBase64 } from "../../util";
 
 export async function getUserToken(code: string):
 	Promise<RESTPostOAuth2AccessTokenResult> {
@@ -51,8 +52,4 @@ export async function isMember(id: Snowflake):
 	let member = await guild.members.fetch(id);
 	if (!member) return false;
 	return member.roles.cache.has(process.env.MEMBER_ROLE_ID as Snowflake);
-}
-
-function toBase64(s: string) {
-	return Buffer.from(s, "binary").toString("base64");
 }
