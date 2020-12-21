@@ -1,7 +1,7 @@
 <header>
-    <div class="logo-container">
+    <a class="logo-container" href="/">
         <img class="logo" src="/assets/images/endtechlogo.png" alt="hm">
-    </div>
+    </a>
     <nav>
         <ul class="nav_links">
             <% for (let i = 0; i < links.length; i++) {
@@ -14,7 +14,8 @@
 
     <% if (auth) { %>
         <div class="avatar">
-            <a href="/auth/disconnect"><i class="material-icons">exit_to_app</i></a>
+            <a href="/members"><i class="material-icons dashboard">dashboard</i></a>
+            <a href="/auth/disconnect"><i class="material-icons disconnect">exit_to_app</i></a>
             <img src="https://cdn.discordapp.com/avatars/<%= auth.id %>/<%= auth.avatar %>.png"
                  alt="<%= auth.username %>" height="50" width="50">
         </div>

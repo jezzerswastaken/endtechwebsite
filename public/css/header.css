@@ -26,8 +26,12 @@ li, a, button {
 	text-decoration: none;
 }
 
-.avatar i:hover {
-	color: #a42b2b;
+.avatar i.disconnect:hover {
+	color: #c43c3c;
+}
+
+.avatar i.dashboard:hover {
+	color: #7c7f83;
 }
 
 .avatar img {
@@ -47,6 +51,10 @@ header {
 	margin-right: auto;
 	cursor: pointer;
 	width: 10%;
+}
+
+.logo-container:active {
+	transform: translateY(1px);
 }
 
 .logo {
