@@ -10,17 +10,21 @@ authRouter.get("/", (req, res) => {
 });
 
 authRouter.get("/discord/", async (req, res) => {
-	let access = await getUserToken(req.query.code as string);
-	let info = await getUserInfo(access.access_token);
-	if (await isMember(info.id)) {
-		db.query("REPLACE INTO archived_logged_on VALUES (?, ?, ?);",
-			[ access.access_token,
-				Date.now() + access.expires_in * 1000,
-				JSON.stringify(info)
-			]);
-		res.cookie("token", access.access_token);
-		res.redirect("/members");
-	} else {
+	try {
+		let access = await getUserToken(req.query.code as string);
+		let info = await getUserInfo(access.access_token);
+		if (await isMember(info.id)) {
+			db.query("REPLACE INTO archived_logged_on VALUES (?, ?, ?);",
+				[ access.access_token,
+					Date.now() + access.expires_in * 1000,
+					JSON.stringify(info)
+				]);
+			res.cookie("token", access.access_token);
+			res.redirect("/members");
+		} else {
+			throw "not a member!";
+		}
+	} catch {
 		res.clearCookie("token");
 		res.redirect("/");
 	}
