@@ -23,6 +23,7 @@ client.once("ready", () => {
 });
 client.login(process.env.DISCORD_TOKEN);
 
+app.set("view engine", "ejs");
 app.use(router);
 app.listen(process.env.PORT || 8080, () => {
 	console.log(`Server listening to port ${process.env.PORT || 8080}`);

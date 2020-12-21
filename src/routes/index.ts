@@ -4,6 +4,7 @@ import { authRouter } from "./auth";
 import * as bodyParser from "body-parser";
 import * as cookieParser from "cookie-parser"
 import { isAuthenticated } from "../auth";
+import { publicRouter } from "./public";
 
 export const router = Express.Router();
 
@@ -11,6 +12,7 @@ router.use(bodyParser.json());
 router.use(cookieParser());
 
 router.use("/", Express.static("public/"));
+router.use("/", publicRouter);
 router.use("/auth", authRouter);
 router.use("/apps", privatise(appsRouter));
 

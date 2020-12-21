@@ -32,6 +32,16 @@ li, a, button {
 	text-decoration: none;
 }
 
+.avatar {
+	display: flex;
+	align-items: center;
+}
+
+.avatar img {
+	clip-path: circle();
+	margin-left: 10px;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;

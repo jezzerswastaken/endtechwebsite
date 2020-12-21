@@ -1,5 +1,6 @@
 import { getUserInfo, getUserToken, isMember } from "./discord";
 import { db } from "../index";
+import { APIUser } from "discord-api-types";
 
 type Req = any;
 type Res = any;
@@ -34,10 +35,22 @@ export async function isAuthenticated(token: string) {
 				if (results.length == 0) {
 					resolve(false);
 				} else if (results[0].expires_in <= Date.now()) {
+					console.log("nooo!!!");
 					resolve(false);
 				} else {
 					resolve(true);
 				}
+			});
+	});
+}
+
+export async function getConnectedUserInfo(token: string): Promise<APIUser | undefined> {
+	return new Promise(resolve => {
+		db.query("SELECT * FROM archived_logged_on WHERE token = ?;",
+			[ token ],
+			(err, results) => {
+				if (results[0]?.info) resolve(JSON.parse(results[0].info))
+				else resolve(undefined);
 			});
 	});
 }
