@@ -39,6 +39,15 @@ body {
 	}
 }
 
+header {
+	animation: 1s ease 2.5s both header-opening;
+}
+
+@keyframes header-opening {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
 .wrap {
 	width: 100%;
 	height: 100%;
