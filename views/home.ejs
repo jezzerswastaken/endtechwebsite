@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>EndTech</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/header.css">
 </head>
@@ -12,14 +14,19 @@
 <body>
     <div class="blind"></div>
 
-    <div class="wrap">
+    <div class="home">
         <%- include("partial/header.ejs", {
             links: [
                 { "Gallery": "#gallery" },
                 { "About Us": "#about" },
                 { "Apply": "#apply" }
             ]
-        }) %>
+        }); %>
+
+        <div class="home-content">
+            <h1>EndTech.</h1>
+            <p>A Minecraft server with focus on technical play on the latest version of the game.</p>
+        </div>
     </div>
 
     <script src="/js/home.js"></script>
