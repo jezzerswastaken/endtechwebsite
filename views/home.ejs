@@ -14,7 +14,7 @@
 <body>
     <div class="blind"></div>
 
-    <div class="home">
+    <div id="home">
         <%- include("partial/header.ejs", {
             links: [
                 { "Gallery": "#gallery" },
@@ -24,11 +24,40 @@
         }); %>
 
         <div class="home-content">
-            <h1>EndTech.</h1>
+            <h1>EndTech</h1>
             <p>A Minecraft server with focus on technical play on the latest version of the game.</p>
         </div>
     </div>
 
+    <div id="gallery">
+        <div class="carousel">
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/IoLPY83"></blockquote>
+        </div>
+
+        <div class="gallery-content">
+            <h1>Gallery</h1>
+            <p>A collection of stuff we've made.</p>
+        </div>
+    </div>
+
+    <div id="about-us">
+        <h1>About Us</h1>
+        <h2>EndTech is an international technical Minecraft server that started back in May 2019.</h2>
+
+        <p>We began in 1.14 with the goal of updating on each stable release in order to push each latest Minecraft
+            version to its limit; end-gaming everything, with the latest technology.<br>
+            After an accidental deletion of our world in July 2020, we have started anew on a perfect new seed,
+            with end portals next to all important farms. This allows us to reach our end goal. Our mission, from which
+            we also derive our name, is to have every farm send their drops to our main storage through the end.<br>
+            To assist us, we use some "Vanilla+" technical mods. These help us with keeping lag to a minimum, as well
+            as making certain resources renewable without the need to dupe.<p>
+
+        <p>Each EndTech member takes satisfaction in developing anything from efficient farms to fun machinery and best
+            of all, we have the ideal community to co-operate with and support each other.<br>
+            Do you share our goals and thoughts? Check below to apply!</p>
+    </div>
+
+    <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
     <script src="/js/home.js"></script>
 </body>
 </html>
