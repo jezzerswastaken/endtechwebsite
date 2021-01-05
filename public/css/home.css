@@ -26,6 +26,7 @@ header {
 h1 {
 	font-family: "Roboto Slab", serif;
 	font-size: 150px;
+	text-shadow: #1d1f22 2px 2px 6px;
 }
 
 p {
@@ -33,6 +34,8 @@ p {
 	width: 50%;
 	font-family: "Roboto Slab", serif;
 	line-height: 50px;
+	text-shadow: #1d1f22 2px 2px 6px;
+
 }
 
 #home {
@@ -48,14 +51,12 @@ p {
 
 .home-content h1 {
 	margin-top: 80px;
-	text-shadow: #1d1f22 2px 2px 6px;
 	animation: 1s ease 2.8s both text-appearing;
 	color: #ffffff;
 }
 
 .home-content p {
 	color: #c5c7ca;
-	text-shadow: #1d1f22 2px 2px 6px;
 	animation: 1s ease 3s both text-appearing;
 }
 
@@ -68,6 +69,7 @@ p {
 	background: #fafafa;
 	box-shadow: 0 0 10px #1d1f22;
 	display: flex;
+	z-index: 10;
 }
 
 .carousel {
@@ -88,6 +90,23 @@ p {
 
 .gallery-content p {
 	color: #36393F;
+}
+
+#about-us {
+	background: url("/assets/images/ncs.jpg") center no-repeat fixed;
+	background-size: cover;
+	padding: 5% 10%;
+}
+
+#about-us h1 {
+	color: white;
+}
+
+#about-us p {
+	width: 100%;
+	font-size: 24px;
+	color: #c5c7ca;
+	text-shadow: #1d1f22 2px 2px 10px;
 }
 
 @keyframes header-opening {
