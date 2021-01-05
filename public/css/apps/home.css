@@ -6,7 +6,7 @@
 }
 
 body {
-	background-image: linear-gradient(rgba(63, 65, 77, 0.7), rgba(63, 65, 77, 0.7)), url("/assets/images/spawn.png");
+	background-image: linear-gradient(rgba(63, 65, 77, 0.7), rgba(63, 65, 77, 0.7)), url("/assets/images/spawn.jpg");
 	background-size: 100%;
 	background-attachment: fixed;
 }

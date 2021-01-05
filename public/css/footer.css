@@ -28,14 +28,6 @@ footer ul {
     all: revert;
 }
 
-/*.footer-projects,*/
-/*.footer-useful {*/
-/*    width: 100%;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    flex-direction: column;*/
-/*}*/
-
 .footer-projects-list {
     text-decoration: #36393F;
 }
