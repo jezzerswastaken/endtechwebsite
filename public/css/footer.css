@@ -1,0 +1,45 @@
+/* That whole CSS is eww as fuck,
+ to anyone reading this, please fix that */
+
+footer {
+    padding: 1%;
+    background: #f6f6f6;
+}
+
+.footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer p {
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    text-shadow: none;
+    width: 100%;
+    color: #6f747a;
+}
+
+footer > p {
+    text-align: center;
+}
+
+footer ul {
+    all: revert;
+}
+
+/*.footer-projects,*/
+/*.footer-useful {*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    flex-direction: column;*/
+/*}*/
+
+.footer-projects-list {
+    text-decoration: #36393F;
+}
+
+.footer-projects-list li a:hover {
+    text-decoration: underline;
+}

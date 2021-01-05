@@ -109,6 +109,18 @@ p {
 	text-shadow: #1d1f22 2px 2px 10px;
 }
 
+#apply {
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 10px #1d1f22;
+}
+
+.discord-button {
+	transform: scale(1.2);
+}
+
 @keyframes header-opening {
 	from { opacity: 0; }
 	to { opacity: 1; }
