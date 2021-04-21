@@ -19,19 +19,34 @@ h1 {
   text-shadow: #1d1f22 2px 2px 6px;
 }
 
+@media screen and (max-width: 720px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
 p {
   font-size: 50px;
-  width: 50%;
+  max-width: 52ch;
   font-family: "Roboto Slab", serif;
-  line-height: 50px;
-  text-shadow: #1d1f22 2px 2px 6px;
+  line-height: 1.25em;
+  text-shadow: rgb(0, 0, 0) 2px 2px 10px;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 720px) {
+  p {
+    font-size: 2rem;
+    max-width: 100%;
+  }
 }
 
 #home {
   width: 100%;
   height: 100vh;
-  background: url("/assets/images/home.jpg") center no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/images/home.jpg") center no-repeat fixed;
   background-size: cover;
+  overflow: hidden;
 }
 
 .home-content {
@@ -45,7 +60,7 @@ p {
 }
 
 .home-content p {
-  color: #c5c7ca;
+  color: rgba(255, 255, 255, 0.85);
   animation: 1s ease 0.5s both text-appearing;
 }
 
@@ -82,7 +97,7 @@ p {
 }
 
 #about-us {
-  background: url("/assets/images/ncs.jpg") center no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/assets/images/ncs.jpg") center no-repeat;
   background-size: cover;
   padding: 5% 10%;
 }
@@ -95,7 +110,12 @@ p {
   width: 100%;
   font-size: 24px;
   color: #c5c7ca;
-  text-shadow: #1d1f22 2px 2px 10px;
+}
+
+@media screen and (max-width: 720px) {
+  #about-us p {
+    font-size: 1.25rem;
+  }
 }
 
 #apply {
@@ -104,6 +124,17 @@ p {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px #1d1f22;
+}
+
+#apply button {
+  white-space: nowrap;
+  padding: 9px 25px;
+  background-color: rgba(106, 8, 153, 1);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: white;
 }
 
 .discord-button {
